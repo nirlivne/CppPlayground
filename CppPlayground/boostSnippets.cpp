@@ -1,6 +1,6 @@
 #if __has_include(<boost/range/combine.hpp>)
 #include <boost/range/combine.hpp>
-#define HAS_BOOST
+#define HAS_BOOSTT
 #endif
 
 #include <vector>
@@ -10,17 +10,22 @@
 #include <format>
 #include "boostSnippets.h"
 
-void boost_loop_combine() {
-#ifndef HAS_BOOST
-    std::cout << "boost is missing\n";
-#else
+
+#ifdef HAS_BOOST
+
+// Based on https://stackoverflow.com/a/8513803/999986
+void boost_loop_combine() 
+{
     std::vector<int> ints{ 1, 2, 3 };
     double doubles[] = { 1.1, 2.2, 3.3 };
     std::list<std::string> strings{ "a", "b", "c" };
 
-    for (auto [x, y, z, w] : boost::combine(ints, doubles, strings, ints)) 
+    for (const auto & [x, y, z, w] : boost::combine(ints, doubles, strings, ints)) 
     {
         std::cout << std::format("{:d} {:f} {} {:d}\n", x, y, z, w);
     }
-#endif
 }
+
+
+#endif  // HAS_BOOST
+
