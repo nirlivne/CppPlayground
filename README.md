@@ -1,7 +1,5 @@
 # CppPlayground
 
-![playground](https://user-images.githubusercontent.com/27345859/160299682-14ac912d-b027-43f3-b4f4-7dc5dda5a7ae.png)
-
 My place to experiment with C++ features, libraries and design ideas
 
 * Design patterns and idioms
@@ -25,3 +23,5 @@ My place to experiment with C++ features, libraries and design ideas
   - Boost
   - ftxui
   - json / yaml / csv
+
+![playground](https://user-images.githubusercontent.com/27345859/160299682-14ac912d-b027-43f3-b4f4-7dc5dda5a7ae.png)
