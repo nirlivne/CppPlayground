@@ -16,23 +16,101 @@
     <Filter Include="Source Files\Examples">
       <UniqueIdentifier>{6d3b5369-dcbe-4efd-aeab-091a66dfdc40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Examples\Boost">
+      <UniqueIdentifier>{0ed8ca67-12df-4122-8285-359207a2ee3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Examples\Patterns &amp; Idioms">
+      <UniqueIdentifier>{fcea67f0-6243-4f0f-857b-64c6962ad71f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Examples\opencv">
+      <UniqueIdentifier>{a8f7016e-0d39-434c-907b-f8a2401eced7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework">
+      <UniqueIdentifier>{ec7dc74a-fe13-4569-9c83-8b0c7611ddec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Examples\Modern C++">
+      <UniqueIdentifier>{4d4b88c6-9fe8-4437-8258-d6244d149ff9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppPlayground.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="boostSnippets.cpp">
-      <Filter>Source Files\Examples</Filter>
+    <ClCompile Include="utils\example_factory.cpp">
+      <Filter>Source Files\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="Visitor.cpp">
-      <Filter>Source Files\Examples</Filter>
+    <ClCompile Include="utils\console_display_policy.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\boost\boost_examples.cpp">
+      <Filter>Source Files\Examples\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\opencv\filters.cpp">
+      <Filter>Source Files\Examples\opencv</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\opencv\opencv_examples.cpp">
+      <Filter>Source Files\Examples\opencv</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\patterns\mixin.cpp">
+      <Filter>Source Files\Examples\Patterns &amp; Idioms</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\patterns\pimpl.cpp">
+      <Filter>Source Files\Examples\Patterns &amp; Idioms</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\patterns\type_erasure.cpp">
+      <Filter>Source Files\Examples\Patterns &amp; Idioms</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\patterns\visitor.cpp">
+      <Filter>Source Files\Examples\Patterns &amp; Idioms</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\patterns\composite.cpp">
+      <Filter>Source Files\Examples\Patterns &amp; Idioms</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ftxui_display_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\factory_items_policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\modern\references.cpp">
+      <Filter>Source Files\Examples\Modern C++</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="boostSnippets.h">
+    <ClInclude Include="examples\boost\boost_examples.h">
+      <Filter>Source Files\Examples\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\opencv\CvWindowWrapper.h">
+      <Filter>Source Files\Examples\opencv</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\opencv\filters.h">
+      <Filter>Source Files\Examples\opencv</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\opencv\opencv_examples.h">
+      <Filter>Source Files\Examples\opencv</Filter>
+    </ClInclude>
+    <ClInclude Include="include\example_factory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Visitor.h">
+    <ClInclude Include="include\console_display_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\macro_overload.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\register_items.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\factory_items_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ftxui_display_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\menu_item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
