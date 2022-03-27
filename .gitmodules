@@ -1,0 +1,6 @@
+[submodule "ftxui"]
+	path = ftxui
+	url = https://github.com/ArthurSonzogni/FTXUI.git
+[submodule "CppPlayground/3rdparty/ftxui"]
+	path = CppPlayground/3rdparty/ftxui
+	url = https://github.com/ArthurSonzogni/FTXUI.git
