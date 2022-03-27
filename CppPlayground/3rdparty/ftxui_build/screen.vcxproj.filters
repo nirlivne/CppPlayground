@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\screen\box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\screen\color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\screen\color_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\screen\screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\screen\string.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\screen\terminal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\screen\box.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\screen\color.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\screen\color_info.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\screen\screen.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\screen\string.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\screen\util.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B5149C2E-F41E-355E-9297-9E3AC9BB1A78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BCA2C84D-3FE1-302B-B0E5-514A1291BDE8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

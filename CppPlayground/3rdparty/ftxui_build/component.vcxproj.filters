@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\catch_event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\checkbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\collapsible.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\component_options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\container.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\dropdown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\maybe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\radiobox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\resizable_split.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\screen_interactive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\slider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\terminal_input_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\animation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\captured_mouse.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\component.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\component_base.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\component_options.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\event.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\mouse.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\receiver.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\screen_interactive.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\include\ftxui\component\task.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\src\ftxui\component\terminal_input_parser.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\nir\dev\CppPlayground\CppPlayground\3rdparty\ftxui\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B5149C2E-F41E-355E-9297-9E3AC9BB1A78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BCA2C84D-3FE1-302B-B0E5-514A1291BDE8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
