@@ -75,6 +75,9 @@
     <ClCompile Include="examples\modern\references.cpp">
       <Filter>Source Files\Examples\Modern C++</Filter>
     </ClCompile>
+    <ClCompile Include="type_traits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="examples\boost\boost_examples.h">

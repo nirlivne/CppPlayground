@@ -185,7 +185,11 @@ void FTXUI_DisplayPolicy::Impl::BuildMenu(const std::vector<MenuItem>& menuItems
             screen.WithRestoredIO([&] {
                 auto& item = orderedItems[selected_item];
                 std::cout << "Running option " << selected_item << " - " << item.get().mKey << "\n\n";
+                std::cout << std::string(70, '-') << "\n";
                 invokeFn(item);
+                std::cout << std::string(70, '-') << "\n";
+                std::cout << "Hit enter to return to the menu\n";
+                std::cout << std::string(70, '-') << "\n";
 
                 std::string input;
                 std::getline(std::cin, input);
@@ -201,6 +205,9 @@ int FTXUI_DisplayPolicy::Impl::ActivateMenu(const invokeFn_t& invokeFn)
 {
     while (true) {
         screen.Loop(renderer);
+        std::cout << std::string(70, '*') << "\n";
+        std::cout << "we are out of the menu loop\n";
+        std::cout << std::string(70, '*') << "\n";
 
         std::cout << "Selected element = " << selected_item << std::endl;
 

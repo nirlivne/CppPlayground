@@ -29,6 +29,7 @@
     <ClCompile Include="examples\patterns\type_erasure.cpp" />
     <ClCompile Include="examples\patterns\visitor.cpp" />
     <ClCompile Include="examples\modern\references.cpp" />
+    <ClCompile Include="examples\modern\type_traits.cpp" />
     <ClCompile Include="utils\ftxui_display_policy.cpp" />
     <ClCompile Include="utils\factory_items_policy.cpp" />
     <ClCompile Include="utils\example_factory.cpp" />
@@ -123,7 +124,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>c:\Workspace\3rdParty\boost_1_75_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -140,7 +141,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>c:\Workspace\3rdParty\boost_1_75_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -157,15 +158,15 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalOptions>/permissive- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>c:\Workspace\3rdParty\boost_1_75_0\$(Platform)\lib;C:\Workspace\3rdParty\opencv451\build\$(Platform)\v142\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Users\nirl\source\repos\FTXUI\out\build\x64-Debug\ftxui-component.lib;C:\Users\nirl\source\repos\FTXUI\out\build\x64-Debug\ftxui-dom.lib;C:\Users\nirl\source\repos\FTXUI\out\build\x64-Debug\ftxui-screen.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>3rdParty\boost\$(Platform)\lib;3rdParty\opencv\build\$(Platform)\v142\lib;3rdParty\lib\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ftxui-component.lib;ftxui-dom.lib;ftxui-screen.lib;fmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -176,7 +177,7 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalOptions>/permissive- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -185,8 +186,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>c:\Workspace\3rdParty\boost_1_75_0\$(Platform)\lib;C:\Workspace\3rdParty\opencv451\build\$(Platform)\v142\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>3rdParty\boost\$(Platform)\lib;3rdParty\opencv\build\$(Platform)\v142\lib;3rdParty\lib\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ftxui-component.lib;ftxui-dom.lib;ftxui-screen.lib;fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
