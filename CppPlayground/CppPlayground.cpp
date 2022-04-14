@@ -9,15 +9,6 @@
 #include "console_display_policy.h"
 #include "factory_items_policy.h"
 
-
-
-// Example I plan to add
-//ADD_MENU_ITEM(mem1, "Smart pointers", "", "memory") {}
-//ADD_MENU_ITEM(thr1, "Atomics and locks", "", "threads") {}
-//ADD_MENU_ITEM(thr2, "conditional variable", "", "threads") {}
-//ADD_MENU_ITEM(thr3, "promise and future", "", "threads") {};
-//ADD_MENU_ITEM(lmb, "Everything about lambdas", "", "Modern C++") {};
-
 int main()
 {
     using ConsoleExamplesMenu = Menu<FactoryItemsPolicy, ConsoleDisplayPolicy>;

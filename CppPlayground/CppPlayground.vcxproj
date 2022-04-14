@@ -21,15 +21,20 @@
   <ItemGroup>
     <ClCompile Include="CppPlayground.cpp" />
     <ClCompile Include="examples\boost\boost_examples.cpp" />
+    <ClCompile Include="examples\modern\iterators.cpp" />
+    <ClCompile Include="examples\modern\sfinae.cpp" />
     <ClCompile Include="examples\opencv\filters.cpp" />
     <ClCompile Include="examples\opencv\opencv_examples.cpp" />
     <ClCompile Include="examples\patterns\composite.cpp" />
+    <ClCompile Include="examples\patterns\copy_and_swap.cpp" />
+    <ClCompile Include="examples\patterns\ctrp.cpp" />
     <ClCompile Include="examples\patterns\mixin.cpp" />
     <ClCompile Include="examples\patterns\pimpl.cpp" />
     <ClCompile Include="examples\patterns\type_erasure.cpp" />
     <ClCompile Include="examples\patterns\visitor.cpp" />
     <ClCompile Include="examples\modern\references.cpp" />
     <ClCompile Include="examples\modern\type_traits.cpp" />
+    <ClCompile Include="examples\tbd.cpp" />
     <ClCompile Include="utils\ftxui_display_policy.cpp" />
     <ClCompile Include="utils\factory_items_policy.cpp" />
     <ClCompile Include="utils\example_factory.cpp" />
@@ -40,6 +45,7 @@
     <ClInclude Include="examples\opencv\CvWindowWrapper.h" />
     <ClInclude Include="examples\opencv\filters.h" />
     <ClInclude Include="examples\opencv\opencv_examples.h" />
+    <ClInclude Include="include\categories.h" />
     <ClInclude Include="include\ftxui_display_policy.h" />
     <ClInclude Include="include\factory_items_policy.h" />
     <ClInclude Include="include\menu_item.h" />
@@ -124,7 +130,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv\build\include;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -141,7 +147,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv\build\include;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -158,7 +164,7 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv\build\include;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalOptions>/permissive- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -177,7 +183,7 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;3rdparty\ftxui\include;3rdparty\fmt\include;3rdparty\boost;3rdparty\opencv\build\include;C:\Workspace\3rdParty\cv-plot-1.2.2\CvPlot\inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalOptions>/permissive- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>

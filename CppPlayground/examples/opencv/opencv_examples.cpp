@@ -1,4 +1,5 @@
 #include "register_items.h"
+#include "categories.h"
 #include "opencv_examples.h"
 
 #ifdef HAS_OPENCV
@@ -50,8 +51,7 @@ void cvplot_test()
 ADD_MENU_ITEM(
     opencv_filters,
     "opencv filters on webcam stream",
-    "",
-    "opencv")
+    category_libraries) //category_opencv)
 {
 
     auto WinDoG = CreateDifferenceOfGaussianWindow("Difference of Gaussian (DoG)", { 0, 0 });

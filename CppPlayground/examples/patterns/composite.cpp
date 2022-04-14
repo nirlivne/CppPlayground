@@ -1,4 +1,5 @@
 #include "register_items.h"
+#include "categories.h"
 
 #include <iostream>
 #include <string>
@@ -229,7 +230,7 @@ Composite::~Composite()
 //The Main method
 //////////////////////////////////////////////////////////////////////////
 
-ADD_MENU_ITEM(composite_pattern, "Composite design pattern", "", "pattern")
+ADD_MENU_ITEM(composite_pattern, "Composite design pattern", category_design)
 {
     std::cout << "==== Creating composite tree ====\n\n";
     //Create a Tree Structure

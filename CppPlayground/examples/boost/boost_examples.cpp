@@ -5,6 +5,7 @@
 
 #include "boost_examples.h"
 #include "register_items.h"
+#include "categories.h"
 #include <format>
 #include <iostream>
 #include <list>
@@ -19,8 +20,7 @@
 ADD_MENU_ITEM(
     boost_loop_combine,
     "boost loop combine",
-    "",
-    "boost")
+    category_boost)
 {
     std::vector<int> ints { 1, 2, 3 };
     double doubles[] = { 1.1, 2.2, 3.3 };
