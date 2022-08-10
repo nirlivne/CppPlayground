@@ -89,9 +89,10 @@ void ReUndoableNumberExample()
 template <typename BASE, typename T = typename BASE::value_type>
 struct Printed : public BASE {
 
-    void print() const
+    const Printed & print() const
     {
         std::cout << "value = " << BASE::get() << "\n";
+        return *this;
     }
 };
 
@@ -99,20 +100,23 @@ struct Printed : public BASE {
 template <typename BASE>
 struct RepeatPrint : public BASE {
     explicit RepeatPrint(BASE const& printable) : BASE(printable) {}
-    void times(unsigned int n) const
+    const RepeatPrint & times(unsigned int n) const
     {
         while (n-- > 0)
         {
             this->print();
-            //this->print();
-
         }
+        return *this;
     }
 };
 
 struct APrint
 {
-    void print() const { std::cout << "A\n"; }
+    const APrint & print() const 
+    { 
+        std::cout << "A\n"; 
+        return *this;
+    }
 };
 
 
@@ -130,7 +134,7 @@ void RepeatedNumberExample()
     printedNumber.print();
 
     std::cout << "Repeat 10 times\n";
-    RepeatPrint(printedNumber).times(10);
+    RepeatPrint(printedNumber).times(10).times(10);
 
     std::cout << "Repeat 4 times\n";
     APrint aprint;
