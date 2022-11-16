@@ -75,6 +75,24 @@
     <ClCompile Include="examples\modern\references.cpp">
       <Filter>Source Files\Examples\Modern C++</Filter>
     </ClCompile>
+    <ClCompile Include="examples\modern\type_traits.cpp">
+      <Filter>Source Files\Examples\Modern C++</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\modern\sfinae.cpp">
+      <Filter>Source Files\Examples\Modern C++</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\tbd.cpp">
+      <Filter>Source Files\Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\patterns\copy_and_swap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\modern\iterators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\patterns\ctrp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="examples\boost\boost_examples.h">
@@ -111,6 +129,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\menu_item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\categories.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

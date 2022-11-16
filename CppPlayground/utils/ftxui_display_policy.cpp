@@ -1,4 +1,5 @@
 #include "ftxui_display_policy.h"
+#include "categories.h"
 
 #include <functional> // for function
 #include <iostream> // for basic_ostream::operator<<, operator<<, endl, basic_ostream, basic_ostream<>::__ostream_type, cout, ostream
@@ -63,7 +64,8 @@ Component Wrap(std::string name, Component component)
 {
     return Renderer(component, [name, component] {
         return hbox({
-                   text(name) | size(WIDTH, EQUAL, 20),
+                   //text(name) | size(WIDTH, EQUAL, 20),
+                   paragraph(name) | size(WIDTH, EQUAL, 20),
                    separator(),
                    component->Render() | xflex,
                })
@@ -116,10 +118,10 @@ ftxui::Component FTXUI_DisplayPolicy::Impl::BuildMenuComponent()
 
         bool first = true;
         for (const auto& item : categoryNode.second) {
-            std::string item_text = " " + std::to_string(index) + ") " + item.mText;
+            std::string item_text = /*" " + std::to_string(index) + ") " +*/ item.mText;
 
             if (first) {
-                std::string cat_text = categoryName.empty() ? "General" : categoryName;
+                std::string cat_text = categoryName.empty() ? category_general : categoryName;
                 menu->Add(Renderer([] { return separator(); }));
                 menu->Add(Wrap(cat_text, MenuEntry(item_text)));
                 first = false;
@@ -149,10 +151,11 @@ ftxui::Component FTXUI_DisplayPolicy::Impl::BuildRenderer()
                 text(R"( | |   _| |_ _| |_  | |_) | |/ _` | | | |/ _` | '__/ _ \| | | | '_ \ / _` |)"),
                 text(R"( | |__|_   _|_   _| |  __/| | (_| | |_| | (_| | | | (_) | |_| | | | | (_| |)"),
                 text(R"(  \____||_|   |_|   |_|   |_|\__,_|\__, |\__, |_|  \___/ \__,_|_| |_|\__,_|)"),
-                text(R"(                                   |___/ |___/                             )")),
+                text(R"(                                   |___/ |___/                             )")) 
+            | size(HEIGHT, EQUAL, 7),
 
-            separator(),
-            menu->Render() | frame | size(HEIGHT, LESS_THAN, 20),
+            //separator(),
+            menu->Render() | frame /* | size(HEIGHT, LESS_THAN, 20)*/,
             })
             | border;
         });
@@ -185,7 +188,11 @@ void FTXUI_DisplayPolicy::Impl::BuildMenu(const std::vector<MenuItem>& menuItems
             screen.WithRestoredIO([&] {
                 auto& item = orderedItems[selected_item];
                 std::cout << "Running option " << selected_item << " - " << item.get().mKey << "\n\n";
+                std::cout << std::string(70, '-') << "\n";
                 invokeFn(item);
+                std::cout << std::string(70, '-') << "\n";
+                std::cout << "Hit enter to return to the menu\n";
+                std::cout << std::string(70, '-') << "\n";
 
                 std::string input;
                 std::getline(std::cin, input);
@@ -201,6 +208,9 @@ int FTXUI_DisplayPolicy::Impl::ActivateMenu(const invokeFn_t& invokeFn)
 {
     while (true) {
         screen.Loop(renderer);
+        std::cout << std::string(70, '*') << "\n";
+        std::cout << "we are out of the menu loop\n";
+        std::cout << std::string(70, '*') << "\n";
 
         std::cout << "Selected element = " << selected_item << std::endl;
 

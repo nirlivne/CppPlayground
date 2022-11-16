@@ -1,4 +1,5 @@
 #include "register_items.h"
+#include "categories.h"
 #include <iostream>
 #include <variant>
 #include <vector>
@@ -36,7 +37,7 @@ auto createVisitor()
     };
 };
 
-ADD_MENU_ITEM(visitor1, "visitor pattern using std::variant", "", "pattern")
+ADD_MENU_ITEM(visitor1, "visitor pattern using std::variant", category_design)
 {
     std::variant<Car, Juice, Burger, Shirt> package;
 
@@ -61,7 +62,7 @@ struct VariantContainer {
     std::vector<value_type> objects;
 };
 
-ADD_MENU_ITEM(visitor2, "visitor example using container or std::variant", "", "pattern")
+ADD_MENU_ITEM(visitor2, "visitor example using container or std::variant", category_design)
 {
     VariantContainer<Juice, Burger, Shirt> container;
     container.objects.push_back(Shirt());

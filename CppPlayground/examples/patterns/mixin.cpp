@@ -1,4 +1,5 @@
 #include "register_items.h"
+#include "categories.h"
 
 #include <iostream>
 using namespace std;
@@ -6,7 +7,7 @@ using namespace std;
 // https://stackoverflow.com/questions/18773367/what-are-mixins-as-a-concept
 
 struct Number {
-    typedef int value_type;
+    using value_type = int;
 
     int n;
     void set(int v) { n = v; }
@@ -15,7 +16,7 @@ struct Number {
 
 template <typename BASE, typename T = typename BASE::value_type>
 struct Undoable : public BASE {
-    typedef T value_type;
+    using value_type = T;
     T before;
     void set(T v)
     {
@@ -28,7 +29,8 @@ using UndoableNumber = Undoable<Number>;
 
 template <typename BASE, typename T = typename BASE::value_type>
 struct Redoable : public BASE {
-    typedef T value_type;
+    using value_type = T;
+
     T after;
     void set(T v)
     {
@@ -40,7 +42,7 @@ struct Redoable : public BASE {
 
 using ReUndoableNumber = Redoable<Undoable<Number>>;
 
-ADD_MENU_ITEM(mixin, "Mixin classes example", "", "pattern")
+void ReUndoableNumberExample()
 {
     std::cout << "Creating ReUndoableNumber (a mixing of UndoableNumber (a mixing of Number))\n";
     ReUndoableNumber mynum;
@@ -57,4 +59,94 @@ ADD_MENU_ITEM(mixin, "Mixin classes example", "", "pattern")
     std::cout << "redo, ";
     mynum.redo();
     std::cout << "get? " << mynum.get() << '\n'; // 84
+}
+
+// The result of this mixin is:
+//  
+//       ,------.
+//       |Number|
+//       |------|
+//       |+get()|
+//       |+set()|
+//       `------'
+//           |
+//           |
+//   ,--------------.
+//   |UndoableNumber|   // using UndoableNumber = Undoable<Number>
+//   |--------------|
+//   |+undo()       |
+//   `--------------'
+//           |
+//  ,----------------.
+//  |ReUndoableNumber|  // using ReUndoableNumber = Redoable<Undoable<Number>>
+//  |----------------|
+//  |+redo()         |
+//  `----------------'
+//  
+//  
+
+
+template <typename BASE, typename T = typename BASE::value_type>
+struct Printed : public BASE {
+
+    const Printed & print() const
+    {
+        std::cout << "value = " << BASE::get() << "\n";
+        return *this;
+    }
+};
+
+
+template <typename BASE>
+struct RepeatPrint : public BASE {
+    explicit RepeatPrint(BASE const& printable) : BASE(printable) {}
+    const RepeatPrint & times(unsigned int n) const
+    {
+        while (n-- > 0)
+        {
+            this->print();
+        }
+        return *this;
+    }
+};
+
+struct APrint
+{
+    const APrint & print() const 
+    { 
+        std::cout << "A\n"; 
+        return *this;
+    }
+};
+
+
+template<typename Printable>
+RepeatPrint<Printable> repeatPrint(Printable const& printable)
+{
+    return RepeatPrint<Printable>(printable);
+}
+
+
+void RepeatedNumberExample()
+{
+    Printed<Number> printedNumber;
+    printedNumber.set(100);
+    printedNumber.print();
+
+    std::cout << "Repeat 10 times\n";
+    RepeatPrint(printedNumber).times(10).times(10);
+
+    std::cout << "Repeat 4 times\n";
+    APrint aprint;
+    RepeatPrint(aprint).times(4);
+}
+// ===================================================================================
+
+ADD_MENU_ITEM(mixin, "Mixin classes example", category_design)
+{
+    std::cout << "Mixin example 1 - Number / UndoableNumber / ReUndoableNumber\n";
+    ReUndoableNumberExample();
+    std::cout << "\n\n";
+    std::cout << "Mixin example 2 - Number / PrintedNumber / RepeatedPrintedNumber\n";
+    RepeatedNumberExample();
 }

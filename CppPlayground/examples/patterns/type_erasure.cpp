@@ -1,4 +1,5 @@
 #include "register_items.h"
+#include "categories.h"
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -64,8 +65,13 @@ void scale(Square& square, double scale_factor)
 
 class Shape;
 template <typename T>
-struct IsShape : public std::is_same<Shape, std::decay_t<T>> {
-};
+struct is_shape : public std::is_same<Shape, std::decay_t<T>> {};
+
+template<typename T>
+inline constexpr bool is_shape_v = is_shape<T>::value;
+
+template<typename T>
+using enable_if_not_at_shape = std::enable_if_t<!is_shape_v<T>>;
 
 class Shape {
 private:
@@ -133,7 +139,9 @@ private:
 public:
     // A templated ctor creating a bridge
 
-    template <typename T, typename = std::enable_if_t<!IsShape<T>::value>>
+    //template <typename T, typename = std::enable_if_t<!IsShape<T>::value>>
+    //template <typename T, typename = std::enable_if_t<!is_shape_v<T>>>
+    template <typename T, typename = enable_if_not_at_shape <T>>
     Shape(T&& x)
         : pimpl { new ShapeModel<T>(std::forward<T>(x)) }
     {
@@ -173,7 +181,7 @@ void drawAllShapes(const std::vector<Shape>& shapes)
     }
 }
 
-ADD_MENU_ITEM(type_erasure, "Type erasure", "", "pattern")
+ADD_MENU_ITEM(type_erasure, "Type erasure", category_design)
 
 // ADD_MENU_ITEM(
 //     type_erasure,
