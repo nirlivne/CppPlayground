@@ -23,7 +23,8 @@ private:
     std::string Indent(size_t cnt, char ch = ' ') const;
     
     const char sep_char = '-';
-    const size_t category_width = 12;
+    const size_t indent_width = 25;
+    const size_t category_width = 28;
     const size_t category_padding = 2;
 
 

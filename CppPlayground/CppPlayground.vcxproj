@@ -35,6 +35,7 @@
     <ClCompile Include="examples\modern\references.cpp" />
     <ClCompile Include="examples\modern\type_traits.cpp" />
     <ClCompile Include="examples\tbd.cpp" />
+    <ClCompile Include="std_error.cpp" />
     <ClCompile Include="utils\ftxui_display_policy.cpp" />
     <ClCompile Include="utils\factory_items_policy.cpp" />
     <ClCompile Include="utils\example_factory.cpp" />
@@ -54,11 +55,6 @@
     <ClInclude Include="include\macro_overload.h" />
     <ClInclude Include="include\menu.h" />
     <ClInclude Include="include\register_items.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="3rdparty\ftxui_build\ftxui_build.vcxproj">
-      <Project>{76ddbacc-70fe-32f4-875f-e968629a74d0}</Project>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -171,7 +167,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>3rdParty\boost\$(Platform)\lib;3rdParty\opencv\build\$(Platform)\v142\lib;3rdParty\lib\$(Configuration);3rdparty\ftxui_build\$(Configuration);3rdparty\fmt\out\build\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>3rdParty\boost\$(Platform)\lib;3rdParty\opencv\build\$(Platform)\v142\lib;3rdParty\lib\$(Configuration);3rdparty\fmt\out\build\$(Platform)-$(Configuration);3rdparty\ftxui\out\build\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ftxui-component.lib;ftxui-dom.lib;ftxui-screen.lib;fmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -192,7 +188,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>3rdParty\boost\$(Platform)\lib;3rdParty\opencv\build\$(Platform)\v142\lib;3rdParty\lib\$(Configuration);3rdparty\ftxui_build\$(Configuration);3rdparty\fmt\out\build\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>3rdParty\boost\$(Platform)\lib;3rdParty\opencv\build\$(Platform)\v142\lib;3rdParty\lib\$(Configuration);3rdparty\fmt\out\build\$(Platform)-$(Configuration);3rdparty\ftxui\out\build\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ftxui-component.lib;ftxui-dom.lib;ftxui-screen.lib;fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

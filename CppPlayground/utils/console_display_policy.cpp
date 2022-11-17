@@ -21,7 +21,7 @@ void ConsoleDisplayPolicy::PrintMenu() const
 
         bool first = true;
         for (const auto& item : categoryNode.second) {
-            if (!first) std::cout << Indent(14) << "|  ";
+            if (!first) std::cout << Indent(30) << "|  ";
             first = false;
             std::cout << index << ") " << item.mText << "\n";
             index++;

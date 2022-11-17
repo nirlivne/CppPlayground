@@ -11,14 +11,16 @@
 
 int main()
 {
-    using ConsoleExamplesMenu = Menu<FactoryItemsPolicy, ConsoleDisplayPolicy>;
+
+#ifdef USE_FTXUI_MENU
     using FTXUIExamplesMenu = Menu<FactoryItemsPolicy, FTXUI_DisplayPolicy>;
-
     FTXUIExamplesMenu menu;
-
-    //ConsoleExamplesMenu menu;
-    //menu.SetTitle("C++ Examples");
-    //menu.SetPrompt("Which example whould you like to run? ");
+#else
+    using ConsoleExamplesMenu = Menu<FactoryItemsPolicy, ConsoleDisplayPolicy>;
+    ConsoleExamplesMenu menu;
+    menu.SetTitle("C++ Examples");
+    menu.SetPrompt("Which example would you like to run? ");
+#endif
 
     auto result = menu.Show();
 }

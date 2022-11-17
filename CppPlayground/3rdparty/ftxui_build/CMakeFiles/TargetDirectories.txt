@@ -1,6 +1,0 @@
-C:/nir/dev/CppPlayground/CppPlayground/3rdparty/ftxui_build/CMakeFiles/screen.dir
-C:/nir/dev/CppPlayground/CppPlayground/3rdparty/ftxui_build/CMakeFiles/PACKAGE.dir
-C:/nir/dev/CppPlayground/CppPlayground/3rdparty/ftxui_build/CMakeFiles/dom.dir
-C:/nir/dev/CppPlayground/CppPlayground/3rdparty/ftxui_build/CMakeFiles/component.dir
-C:/nir/dev/CppPlayground/CppPlayground/3rdparty/ftxui_build/CMakeFiles/ALL_BUILD.dir
-C:/nir/dev/CppPlayground/CppPlayground/3rdparty/ftxui_build/CMakeFiles/ZERO_CHECK.dir

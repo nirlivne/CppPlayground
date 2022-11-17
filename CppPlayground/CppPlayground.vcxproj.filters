@@ -85,13 +85,16 @@
       <Filter>Source Files\Examples</Filter>
     </ClCompile>
     <ClCompile Include="examples\patterns\copy_and_swap.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="examples\modern\iterators.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Examples\Patterns &amp; Idioms</Filter>
     </ClCompile>
     <ClCompile Include="examples\patterns\ctrp.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Examples\Patterns &amp; Idioms</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\modern\iterators.cpp">
+      <Filter>Source Files\Examples\Patterns &amp; Idioms</Filter>
+    </ClCompile>
+    <ClCompile Include="std_error.cpp">
+      <Filter>Source Files\Examples\Modern C++</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
