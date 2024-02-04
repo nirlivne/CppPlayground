@@ -1,7 +1,6 @@
 # CppPlayground
 
 My place to experiment with C++ features, libraries and design ideas
-Nothing fancy, snippets and code examples
 
 * Design patterns and idioms
   - pimpl
