@@ -10,6 +10,7 @@ My place to experiment with C++ features, libraries and design ideas
   - mixins
   - visitor (with std::variant)
   - policy based design
+  - Builder (Bloch)
 * Multithreading
   - TBD: atomics and locks, promises and futures, conditional variable, lock free
 * Modern C++ features
